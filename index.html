@@ -110,6 +110,20 @@
             100% { transform: translateY(0px); }
         }
         .float-animation { animation: float 6s ease-in-out infinite; }
+
+        /* Premium Install Button Glow Effect */
+        .install-btn-premium {
+            background: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            transition: all 0.4s ease;
+        }
+        .install-btn-premium:hover {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+            transform: scale(1.05);
+            background: var(--primary);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -125,11 +139,12 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 px-4 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card px-4 md:px-8 py-2 md:py-3 rounded-2xl">
-            <div class="flex items-center gap-2 md:gap-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card px-5 py-4 rounded-[30px] shadow-2xl">
+            <div class="flex items-center gap-4">
                 <!-- Logo logo.jpg -->
-                <img src="logo.jpg" alt="Logo" class="w-8 h-8 md:w-10 md:h-10 rounded-lg object-cover shadow-lg shadow-blue-500/20">
-                <span class="text-xs md:text-xl font-bold tracking-tighter uppercase">Games<span class="text-blue-500">Arena</span></span>
+                <img src="logo.jpg" alt="Logo" class="w-12 h-12 md:w-16 md:h-16 rounded-2xl object-cover shadow-lg shadow-blue-500/30 ring-2 ring-white/10">
+                <!-- Enlarged "GAMES ARENA" Text with Space -->
+                <span class="text-xl md:text-3xl font-[900] tracking-tighter uppercase leading-none">Games <span class="text-blue-500">Arena</span></span>
             </div>
             
             <div class="hidden md:flex gap-8 text-[11px] font-bold tracking-[0.2em] text-gray-400">
@@ -138,15 +153,15 @@
                 <a href="https://t.me/GamesArenaSupport" target="_blank" class="hover:text-blue-400 transition uppercase">Support</a>
             </div>
 
-            <!-- Optimized Install Button for Mobile -->
-            <a href="GamesArenaV1.apk" download="GamesArenaV1.apk" class="bg-white text-black px-3 py-1.5 md:px-6 md:py-2 rounded-xl text-[10px] md:text-xs font-black hover:bg-blue-500 hover:text-white transition-all text-center whitespace-nowrap tracking-tight leading-none">
+            <!-- Premium Sized Install Button -->
+            <a href="GamesArenaV1.apk" download="GamesArenaV1.apk" class="install-btn-premium px-6 py-4 rounded-2xl text-[12px] md:text-sm font-[900] text-center whitespace-nowrap tracking-widest uppercase active:scale-95">
                 INSTALL APK
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-40 pb-20 px-6">
+    <section class="relative pt-56 pb-20 px-6">
         <div class="max-w-5xl mx-auto text-center">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8 float-animation">
                 <span class="relative flex h-2 w-2">
@@ -166,7 +181,7 @@
 
             <div class="flex flex-col items-center gap-6">
                 <!-- Main Download Button -->
-                <a href="GamesArenaV1.apk" download="GamesArenaV1.apk" class="btn-primary w-full sm:w-auto px-12 py-5 rounded-2xl text-xl font-bold flex items-center justify-center gap-4">
+                <a href="GamesArenaV1.apk" download="GamesArenaV1.apk" class="btn-primary w-full sm:w-auto px-12 py-5 rounded-2xl text-xl font-bold flex items-center justify-center gap-4 shadow-2xl shadow-blue-500/20">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
